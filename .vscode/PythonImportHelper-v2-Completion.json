@@ -418,7 +418,7 @@
         "kind": 2,
         "importPath": "hello_world",
         "description": "hello_world",
-        "peekOfCode": "def move_question(self, dt):\n            self.question.pos={20 , 20}\nif __name__ == \"__main__\":\n  app =MyApp()\n  app.run()",
+        "peekOfCode": "def move_question(self, dt):\n            self.question.pos={20 , 20}\n      # Test Kommentar zum pushen\nif __name__ == \"__main__\":\n  app =MyApp()\n  app.run()",
         "detail": "hello_world",
         "documentation": {}
     },
@@ -427,7 +427,7 @@
         "kind": 5,
         "importPath": "hello_world",
         "description": "hello_world",
-        "peekOfCode": "self.question = Label(text = \"choose your number range\")\nself.add_widget(self.question)\nClock.schedule_once(self.move_question, 1 )\ndef move_question(self, dt):\n            self.question.pos={20 , 20}\nif __name__ == \"__main__\":\n  app =MyApp()\n  app.run()",
+        "peekOfCode": "self.question = Label(text = \"choose your number range\")\nself.add_widget(self.question)\nClock.schedule_once(self.move_question, 1 )\ndef move_question(self, dt):\n            self.question.pos={20 , 20}\n      # Test Kommentar zum pushen\nif __name__ == \"__main__\":\n  app =MyApp()\n  app.run()",
         "detail": "hello_world",
         "documentation": {}
     },
