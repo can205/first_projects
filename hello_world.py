@@ -8,9 +8,9 @@ from kivy.uix.button import Button
 from kivy.clock import Clock
 
 class Game_Window(GridLayout):
-   def build(self):
-#    def __init__(self, **kwargs):
-#        super().__init__(**kwargs)
+  
+    def __init__(self, **kwargs):
+       super().__init__(**kwargs)
        self.cols = 1
        self.size_hint=(1 , 1)
        self.pos_hint = {
@@ -30,8 +30,7 @@ class Game_Window(GridLayout):
                           })
        self.add_widget(self.Title)
        
-       self.question = Label(text = "choose your number range")
-       self.add_widget(self.question)
+       
       
 
       
@@ -50,14 +49,10 @@ class Game_Window(GridLayout):
            )
        self.start_button.bind(on_press = self.start_button_behavior)
        self.add_widget(self.start_button)
-   def start_button_behavior(self, *args):
+    def start_button_behavior(self, *args):
        self.Title.text = f"Guess Number:"
        return
    
-# Clock.schedule_once(self.move_question, 1 )
-# def move_question(self, dt):
-#            self.label.pos={20 , 20}
-
 
 class MyApp(App):
     def build(self):
@@ -68,11 +63,18 @@ class MyApp(App):
         screen.add_widget(self.game_window)
         self.screen_manager.add_widget(screen)
         self.screen_manager.current = 'game_window'
-        return self.screen_manager
+       
    
-
-
-
+        
+            
+        return self.screen_manager
+    
+self.question = Label(text = "choose your number range")
+self.add_widget(self.question)
+        
+Clock.schedule_once(self.move_question, 1 )
+def move_question(self, dt):
+            self.question.pos={20 , 20}
       
 
 
