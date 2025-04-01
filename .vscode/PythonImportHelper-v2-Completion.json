@@ -48,6 +48,14 @@
         "documentation": {}
     },
     {
+        "label": "Clock",
+        "importPath": "kivy.clock",
+        "description": "kivy.clock",
+        "isExtraImport": true,
+        "detail": "kivy.clock",
+        "documentation": {}
+    },
+    {
         "label": "Window",
         "importPath": "kivy.core.window",
         "description": "kivy.core.window",
@@ -104,6 +112,22 @@
         "documentation": {}
     },
     {
+        "label": "GridLayout",
+        "importPath": "kivy.uix.gridlayout",
+        "description": "kivy.uix.gridlayout",
+        "isExtraImport": true,
+        "detail": "kivy.uix.gridlayout",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "kivy.uix.image",
+        "description": "kivy.uix.image",
+        "isExtraImport": true,
+        "detail": "kivy.uix.image",
+        "documentation": {}
+    },
+    {
         "label": "Image",
         "importPath": "kivy.uix.image",
         "description": "kivy.uix.image",
@@ -149,6 +173,22 @@
         "description": "kivy.uix.label",
         "isExtraImport": true,
         "detail": "kivy.uix.label",
+        "documentation": {}
+    },
+    {
+        "label": "ScreenManager",
+        "importPath": "kivy.uix.screenmanager",
+        "description": "kivy.uix.screenmanager",
+        "isExtraImport": true,
+        "detail": "kivy.uix.screenmanager",
+        "documentation": {}
+    },
+    {
+        "label": "Screen",
+        "importPath": "kivy.uix.screenmanager",
+        "description": "kivy.uix.screenmanager",
+        "isExtraImport": true,
+        "detail": "kivy.uix.screenmanager",
         "documentation": {}
     },
     {
@@ -208,6 +248,14 @@
         "documentation": {}
     },
     {
+        "label": "TextInput",
+        "importPath": "kivy.uix.textinput",
+        "description": "kivy.uix.textinput",
+        "isExtraImport": true,
+        "detail": "kivy.uix.textinput",
+        "documentation": {}
+    },
+    {
         "label": "turtle",
         "kind": 6,
         "isExtraImport": true,
@@ -232,14 +280,6 @@
         "importPath": "random",
         "description": "random",
         "detail": "random",
-        "documentation": {}
-    },
-    {
-        "label": "BoxLayout",
-        "importPath": "kivy.uix.boxlayout",
-        "description": "kivy.uix.boxlayout",
-        "isExtraImport": true,
-        "detail": "kivy.uix.boxlayout",
         "documentation": {}
     },
     {
@@ -400,7 +440,7 @@
         "kind": 6,
         "importPath": "hello_world",
         "description": "hello_world",
-        "peekOfCode": "class Game_Window(GridLayout):\n    def __init__(self, **kwargs):\n       super().__init__(**kwargs)\n       self.cols = 1\n       self.size_hint=(1 , 1)\n       self.pos_hint = {\n        \"center_x\": 0.5,\n        \"center_y\": 0.5,\n       }\n       self.add_widget(Image(source =\"./number.Guesser.drawio.png\"))",
+        "peekOfCode": "class Game_Window(GridLayout):\n    def __init__(self, **kwargs):\n       super().__init__(**kwargs)\n       self.cols = 1\n       self.size_hint=(1 , 1)\n       self.pos_hint = {\n        \"center_x\": 0.5,\n        \"center_y\": 0.5,\n       }\n       self.Title = Label(",
         "detail": "hello_world",
         "documentation": {}
     },
@@ -409,26 +449,17 @@
         "kind": 6,
         "importPath": "hello_world",
         "description": "hello_world",
-        "peekOfCode": "class MyApp(App):\n    def build(self):\n        self.screen_manager = ScreenManager()\n        self.game_window = Game_Window()\n        screen = Screen(name = \"game_window\")\n        screen.add_widget(self.game_window)\n        self.screen_manager.add_widget(screen)\n        self.screen_manager.current = 'game_window'\n        return self.screen_manager\nself.question = Label(text = \"choose your number range\")",
+        "peekOfCode": "class MyApp(App):\n    def build(self):\n        self.screen_manager = ScreenManager()\n        self.game_window = Game_Window()\n        screen = Screen(name = \"game_window\")\n        screen.add_widget(self.game_window)\n        self.screen_manager.add_widget(screen)\n        self.screen_manager.current = 'game_window'\n        Clock.schedule_once(self.move_question,120  )\n        return self.screen_manager",
         "detail": "hello_world",
         "documentation": {}
     },
     {
-        "label": "move_question",
-        "kind": 2,
-        "importPath": "hello_world",
-        "description": "hello_world",
-        "peekOfCode": "def move_question(self, dt):\n            self.question.pos={20 , 20}\n      # Test Kommentar zum pushen\nif __name__ == \"__main__\":\n  app =MyApp()\n  app.run()",
-        "detail": "hello_world",
-        "documentation": {}
-    },
-    {
-        "label": "self.question",
-        "kind": 5,
-        "importPath": "hello_world",
-        "description": "hello_world",
-        "peekOfCode": "self.question = Label(text = \"choose your number range\")\nself.add_widget(self.question)\nClock.schedule_once(self.move_question, 1 )\ndef move_question(self, dt):\n            self.question.pos={20 , 20}\n      # Test Kommentar zum pushen\nif __name__ == \"__main__\":\n  app =MyApp()\n  app.run()",
-        "detail": "hello_world",
+        "label": "Game_Window",
+        "kind": 6,
+        "importPath": "hello_world2",
+        "description": "hello_world2",
+        "peekOfCode": "class Game_Window(GridLayout):\n    def __init__(self, **kwargs):\n       super().__init__(**kwargs)\n       self.cols = 1\n       self.size_hint=(0.8 , 0.8)\n       self.pos_hint = {\n        \"center_x\": 0.5,\n        \"center_y\": 0.5,\n       }\n       self.Title = Label(",
+        "detail": "hello_world2",
         "documentation": {}
     },
     {
@@ -436,7 +467,7 @@
         "kind": 6,
         "importPath": "hello_world2",
         "description": "hello_world2",
-        "peekOfCode": "class MyApp(App):\n    def build(self):\n        layout = BoxLayout(orientation='vertical')\n        # Create a label\n        self.label = Label(text=\"Hello, World!\", font_size=32)\n        layout.add_widget(self.label)\n        # Create a button to move the label\n        button = Button(text=\"Move Label\",\n                        size_hint=(0.1,0.1))\n        button.bind(on_press=self.move_label)",
+        "peekOfCode": "class MyApp(App):\n    def build(self):\n        self.screen_manager = ScreenManager()\n        self.game_window = Game_Window()\n        screen = Screen(name = \"game_window\")\n        screen.add_widget(self.game_window)\n        self.screen_manager.add_widget(screen)\n        self.screen_manager.current = 'game_window'\n        Clock.schedule_once(self.move_question,120  )\n        return self.screen_manager",
         "detail": "hello_world2",
         "documentation": {}
     },
@@ -481,7 +512,7 @@
         "kind": 5,
         "importPath": "nummer_guesser",
         "description": "nummer_guesser",
-        "peekOfCode": "to_guess_number = random.randint(1, 10)\nguess_number(to_guess_number)",
+        "peekOfCode": "to_guess_number = random.randint(1, 10)\nguess_number(to_guess_number)\n# user.name=can205\n# user.email=cantopci8@yahoo.com",
         "detail": "nummer_guesser",
         "documentation": {}
     }

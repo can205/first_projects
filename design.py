@@ -109,16 +109,16 @@ class Stockview(GridLayout):
          self.ticker_add.bind(on_press = self.add_ticker_symbol)
          self.stock_add.add_widget(self.ticker_add)
 
-     def add_ticker_symbol(self, *args):
-          symbol = self.ticker_input.text.strip()
-          if not symbol:
-               return
-          try:
-                stock = yfinance.Ticker(ticker = symbol)
-                data = stock.info
-                self.add_ticker_row(data["symbol"], data["longName"], data["regularMarketPrice"])
-          except Exception as e:
-              print(f"Could not retrieve data for symbol: {symbol}. Error {e}")
+     # def add_ticker_symbol(self, *args):
+     #      symbol = self.ticker_input.text.strip()
+     #      if not symbol:
+     #           return
+     #      try:
+     #            stock = yfinance.Ticker(ticker = symbol)
+     #            data = stock.info
+     #            self.add_ticker_row(data["symbol"], data["longName"], data["regularMarketPrice"])
+     #      except Exception as e:
+     #          print(f"Could not retrieve data for symbol: {symbol}. Error {e}")
 
 
           

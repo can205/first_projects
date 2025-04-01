@@ -84,3 +84,7 @@ to_guess_number = random.randint(1, 10)
 
 
 guess_number(to_guess_number)
+
+
+# user.name=can205
+# user.email=cantopci8@yahoo.com
