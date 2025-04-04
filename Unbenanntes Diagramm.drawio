@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.2.2">
+  <diagram name="Seite-1" id="nxsizRd1DO6GKSeLVGgJ">
+    <mxGraphModel dx="4456" dy="2390" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TZqhxtQeG6KvQLw0VNtS-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1526" y="-700" width="1846" height="939" as="geometry" />
+        </mxCell>
+        <mxCell id="TZqhxtQeG6KvQLw0VNtS-4" value="&lt;font style=&quot;font-size: 41px;&quot;&gt;Tries&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;0&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;909&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;9&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;87&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;8&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;7&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;7&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;6&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;543&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;97&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;4&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;4314&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;3&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;2&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 41px;&quot;&gt;1&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-102" y="-632" width="347" height="833" as="geometry" />
+        </mxCell>
+        <mxCell id="TZqhxtQeG6KvQLw0VNtS-5" value="&lt;font style=&quot;font-size: 54px;&quot;&gt;Comparison&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 44px;&quot;&gt;this run:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 35px;&quot;&gt;tries:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;range&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;time&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 54px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 45px;&quot;&gt;last run&lt;/font&gt;&lt;font style=&quot;font-size: 54px;&quot;&gt;:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;tries&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;rannge&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;&lt;font style=&quot;&quot;&gt;tim&lt;/font&gt;&lt;font style=&quot;&quot;&gt;e&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 54px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 45px;&quot;&gt;best run&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;tri&lt;/font&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;es:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;range:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;time:&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1455" y="-642" width="360" height="823" as="geometry" />
+        </mxCell>
+        <mxCell id="TZqhxtQeG6KvQLw0VNtS-6" value="&lt;font style=&quot;font-size: 35px;&quot;&gt;Guess Nummber&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-789.5" y="-273.75" width="390" height="116.5" as="geometry" />
+        </mxCell>
+        <mxCell id="TZqhxtQeG6KvQLw0VNtS-7" value="&lt;font style=&quot;font-size: 42px;&quot;&gt;input&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1032" y="-530" width="867" height="447" as="geometry" />
+        </mxCell>
+        <mxCell id="TZqhxtQeG6KvQLw0VNtS-8" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1293" y="-706" width="1880" height="926" as="geometry" />
+        </mxCell>
+        <mxCell id="TZqhxtQeG6KvQLw0VNtS-9" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Back to menue&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1779.5" y="-60" width="907" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="TZqhxtQeG6KvQLw0VNtS-10" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Theme&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1779.5" y="-219" width="907" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="TZqhxtQeG6KvQLw0VNtS-11" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Brightness&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1779.5" y="-378" width="907" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="TZqhxtQeG6KvQLw0VNtS-12" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Volume&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1779.5" y="-536" width="907" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

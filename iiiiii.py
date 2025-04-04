@@ -15,17 +15,12 @@ from kivy.core.audio import SoundLoader
 class Game_Window(FloatLayout):
     def __init__(self, **kwargs):
        super().__init__(**kwargs)
-       self.background_music = SoundLoader.load('./ukulele-8488.mp3')
-       if self.background_music:
-         print("Music loaded successfully!")
-         self.background_music.loop = True  # Optional: Set to loop the music
-         self.background_music.play() 
+       self.click_sound = SoundLoader.load("./click-234708.mp3")
        self.cols = 1
        self.size_hint=(1 , 1)
        self.pos_hint = {"center_x":0.5, "center_y":0.5}
        self.background_color = (1, 1, 1, 1) 
 
-      
        with self.canvas.before:
             self.bg_color = Color(*self.background_color)
             self.rect = Rectangle(size=self.size, pos=self.pos)
@@ -97,14 +92,14 @@ class Game_Window(FloatLayout):
         in_game_screen.add_widget(in_game)
         app.screen_manager.add_widget(in_game_screen)
         app.screen_manager.current = "InGame"
-       
+        self.play_click_sound()
         
     def options_button_behavior(self, *args):
        app.screen_manager.current = "Options_Menue"
-       
+       self.play_click_sound()
 
     def gamemode_button_behavior(self,*args):
-        print("h")
+        self.play_click_sound()
     
     def update_background_color(self, color):
         """Update the background color to match the brightness state"""
@@ -122,7 +117,7 @@ class Game_Window(FloatLayout):
         """Change the brightness when the button is pressed"""
         app = App.get_running_app()
         app.change_brightness()
-      
+        self.play_click_sound()
 
     def change_brightness(self):
         """Change the screen's background color to simulate brightness change"""
@@ -142,11 +137,16 @@ class Game_Window(FloatLayout):
         self.rect.pos = self.pos
         self.rect.size = self.size
      
+    def play_click_sound(self):
+        if self.click_sound:
+            self.click_sound.play()
 
 
 
 class Options_Menue(FloatLayout):
     def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.click_sound = SoundLoader.load('./click-234708.mp3')
         self.cols = 1
         self.size_hint = (1, 1)
         self.pos_hint = {
@@ -155,10 +155,12 @@ class Options_Menue(FloatLayout):
         }
         self.background_color = (1, 1, 1, 1) 
         self.background_color = App.get_running_app().brightness_state
-      #   with self.canvas.before:
-      #       self.bg_color = Color(*self.background_color)  
-      #       self.rect = Rectangle(size=self.size, pos=self.pos)
-      #   self.bind(size=self.on_size, pos=self.on_size)
+
+        with self.canvas.before:
+            self.bg_color = Color(*self.background_color)  
+            self.rect = Rectangle(size=self.size, pos=self.pos)
+        
+        self.bind(size=self.on_size, pos=self.on_size)
    
         self.volume_button = Button(
             text="Volume",
@@ -203,7 +205,8 @@ class Options_Menue(FloatLayout):
      """Change the brightness when the button is pressed"""
      app= App.get_running_app()
      app.change_brightness()
-    
+     self.play_click_sound()  
+
     def change_brightness(self):
      """Change the screen's background color to simulate brightness change"""
      app= App.get_running_app()
@@ -225,25 +228,21 @@ class Options_Menue(FloatLayout):
 
     def back_to_menue_button_behavior(self, *args):
         app.screen_manager.current = "game_window"
-        
-  
+        self.play_click_sound()
+    
     def volume_button_behavior(self, *args):
-         
-     if self.background_music():
-      if self.background_music < 1:
-            self.background_music.volume += 0.1
-            print(f"Volume increased: {self.background_music}")
-      if self.background_music.volume > 1:
-           self.background_music.volume = 1
-      else:
-          self.background_music.volume = 0
-         
-   
+         self.play_click_sound()
+    
+    def play_click_sound(self):
+        if self.click_sound:
+            self.click_sound.play()
+
 
 class InGame(FloatLayout):
     def __init__(self,max_number,**kwargs):
         self.the_searched_number = random.randint(1, max_number)
-     
+        self.click_sound = SoundLoader.load('./click-234708.mp3')
+        self.count = 1
         super().__init__(**kwargs)
         self.cols = 3
         self.size_hint = (1, 1)
@@ -330,7 +329,7 @@ class InGame(FloatLayout):
         """Change the brightness when the button is pressed"""
         app = App.get_running_app()
         app.change_brightness()
-  # Trigger the global brightness change
+        self.play_click_sound()  # Trigger the global brightness change
 
     def change_brightness(self):
         """Update the background color based on the current brightness state."""
@@ -354,6 +353,7 @@ class InGame(FloatLayout):
     
     def bestaetigen_button_behavior(self, the_searched_number):
         guessed_number_text = self.guessed_number.text
+        self.play_click_sound()
         try:
             guessed_number = int(guessed_number_text)
 
@@ -394,6 +394,7 @@ class InGame(FloatLayout):
         self.rect.size = self.size
     
     def exit_button_behavior(self,*args):
+        self.play_click_sound()
         app.screen_manager.current="game_window" 
    
     
@@ -418,7 +419,12 @@ class InGame(FloatLayout):
         self.rect.pos = self.pos
         self.rect.size = self.size
 
+    def play_click_sound(self):
+        if self.click_sound:
+            self.click_sound.play()
 
+        else:
+            print("gi")
 
 
 
@@ -442,6 +448,12 @@ class MyApp(App):
         options_screen = Screen(name="Options_Menue")
         options_screen.add_widget(options_menue)
         self.screen_manager.add_widget(options_screen)
+
+        # Create and add in-game screen
+        in_game_screen = InGame(max_number=100)  # Example max number
+        in_game_screen_widget = Screen(name="InGame")
+        in_game_screen_widget.add_widget(in_game_screen)
+        self.screen_manager.add_widget(in_game_screen_widget)
 
         self.screen_manager.current = 'game_window'
 
